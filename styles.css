@@ -375,12 +375,36 @@ a {
   font-family: "SF Pro Display", "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
 }
 
+.brands-carousel {
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
 .brands-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 36px;
   position: relative;
   z-index: 2;
+  animation: scroll-brands 20s linear infinite;
+  width: fit-content;
+  min-width: 100%;
+  padding: 0;
+}
+
+.brands-carousel:hover .brands-grid {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-brands {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 2));
+  }
 }
 
 .brand-card {
