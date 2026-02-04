@@ -53,7 +53,7 @@ a {
   align-items: center;
   justify-content: center;
   padding: 40px 40px 24px;
-  background: var(--bg);
+  background: linear-gradient(180deg, #f4f5f7 0%, #ffffff 60%);
   border-bottom: none;
   position: sticky;
   top: 0;
@@ -70,7 +70,7 @@ a {
 }
 
 .logo {
-  height: 140px;
+  height: 220px;
   width: auto;
   display: block;
   filter: none;
@@ -173,6 +173,11 @@ a {
   pointer-events: none;
 }
 
+.hero::before,
+.hero::after {
+  mix-blend-mode: screen;
+}
+
 .hero > * {
   position: relative;
   z-index: 2;
@@ -234,7 +239,7 @@ a {
 
 .section {
   padding: 100px 40px;
-  background: var(--bg);
+  background: linear-gradient(180deg, #ffffff 0%, #f7f8fa 55%, #ffffff 100%);
 }
 
 /* BRANDS SECTION */
@@ -260,6 +265,18 @@ a {
   pointer-events: none;
 }
 
+.brands-section::after {
+  content: '';
+  position: absolute;
+  left: -10%;
+  bottom: -30%;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
 .brands-section h2 {
   text-align: center;
   font-size: 48px;
@@ -271,10 +288,10 @@ a {
 }
 
 .brands-title {
-  font-size: 52px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  text-transform: none;
   font-family: "SF Pro Display", "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -545,7 +562,7 @@ a {
   }
 
   .logo {
-    height: 96px;
+    height: 140px;
   }
   
   .brands-section {
@@ -572,6 +589,6 @@ a {
 
 @media (min-width: 900px) {
   .logo {
-    height: 140px;
+    height: 220px;
   }
 }
