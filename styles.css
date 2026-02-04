@@ -70,7 +70,7 @@ a {
 }
 
 .logo {
-  height: 72px;
+  height: 140px;
   width: auto;
   display: block;
   filter: none;
@@ -545,7 +545,7 @@ a {
   }
 
   .logo {
-    height: 56px;
+    height: 96px;
   }
   
   .brands-section {
@@ -572,6 +572,6 @@ a {
 
 @media (min-width: 900px) {
   .logo {
-    height: 72px;
+    height: 140px;
   }
 }
