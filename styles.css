@@ -82,6 +82,7 @@ a {
   border: none;
   padding: 0;
   cursor: pointer;
+  position: relative;
 }
 
 .logo {
@@ -95,9 +96,10 @@ a {
 
 .menu {
   position: absolute;
-  top: calc(100% + 12px);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
+  margin-top: -2px;
   display: none;
   flex-direction: column;
   gap: 6px;
