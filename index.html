@@ -1,12 +1,119 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>City Sales</title>
-  </head>
-  <body>
-    <h1>City Sales</h1>
-    <p>Field sales for brands.</p>
-    <p>Email: info@citysales.nl</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Shortlist</title>
+  <meta name="description" content="The Shortlist curates the right connections between brands and venues." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container header">
+    <div class="brand">
+      <!-- Replace with logo later -->
+      <div class="brand-mark">✓</div>
+      <div class="brand-name">The Shortlist</div>
+    </div>
+
+    <a class="btn" href="#contact">Contact</a>
+  </header>
+
+  <main>
+    <section class="container hero">
+      <h1>The Shortlist</h1>
+      <p>
+        We curate the right connections between brands and venues.
+        No bulk outreach — only a focused shortlist that converts.
+      </p>
+
+      <div class="actions">
+        <a class="btn primary" href="mailto:info@theshortlist.co">Email us</a>
+        <a class="btn ghost" href="https://wa.me/" target="_blank" rel="noreferrer">WhatsApp</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="card">
+          <div class="k">Curated venues</div>
+          <div class="v">Relevant, high-fit locations</div>
+        </div>
+        <div class="card">
+          <div class="k">Selected brands</div>
+          <div class="v">Products that actually move</div>
+        </div>
+        <div class="card">
+          <div class="k">Faster decisions</div>
+          <div class="v">Less noise, more yes</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2>What we do</h2>
+      <div class="grid3">
+        <div class="card">
+          <h3>Selection</h3>
+          <p>
+            We filter brands and venues before any introduction is made.
+            Only strong matches make the shortlist.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Introduction</h3>
+          <p>
+            We handle the outreach, pitch, and context so both sides
+            understand the value immediately.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Follow-through</h3>
+          <p>
+            We stay involved until placement, onboarding,
+            and first results are in.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li>
+          <span>1</span>
+          <div>
+            <strong>Alignment</strong>
+            <p>We define positioning, margins, and ideal partners.</p>
+          </div>
+        </li>
+        <li>
+          <span>2</span>
+          <div>
+            <strong>Shortlisting</strong>
+            <p>We create a focused list of the best possible matches.</p>
+          </div>
+        </li>
+        <li>
+          <span>3</span>
+          <div>
+            <strong>Connection</strong>
+            <p>Introductions are made, decisions happen faster.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="contact" class="container section contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:info@theshortlist.co">info@theshortlist.co</a></p>
+      <p>WhatsApp: <a href="https://wa.me/" target="_blank" rel="noreferrer">Open chat</a></p>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="y"></span> The Shortlist</p>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
