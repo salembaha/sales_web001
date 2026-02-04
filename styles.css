@@ -257,12 +257,15 @@ a {
 
 .hero-image {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
 .hero-image img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   height: auto;
   filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.3));
   border-radius: 20px;
