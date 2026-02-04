@@ -594,6 +594,17 @@ a {
   background: var(--bg);
 }
 
+.footer-credit {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+.footer-credit a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .hero {
