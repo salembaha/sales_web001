@@ -650,6 +650,10 @@ a {
     gap: 40px;
   }
 
+  .hero-image {
+    display: none;
+  }
+
   .hero h1.tagline {
     font-size: 36px;
   }
