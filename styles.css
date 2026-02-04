@@ -77,6 +77,13 @@ a {
   pointer-events: auto;
 }
 
+.logo-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
 .logo {
   width: 60vw;
   max-width: 720px;
@@ -84,6 +91,36 @@ a {
   display: block;
   filter: none;
   transition: transform 0.2s ease;
+}
+
+.menu {
+  position: absolute;
+  top: 100%;
+  margin-top: 8px;
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  pointer-events: auto;
+}
+
+.menu a {
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.menu a:hover {
+  background: rgba(124, 58, 237, 0.08);
+}
+
+.menu.is-open {
+  display: flex;
 }
 
 .logo:hover {

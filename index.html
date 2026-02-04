@@ -21,13 +21,20 @@
   
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body id="top">
   <header class="container header">
     <div class="brand">
-      <a href="#top" aria-label="Back to top">
+      <button class="logo-button" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="site-menu">
         <img src="logo.png" alt="The Shortlist logo" class="logo">
-      </a>
+      </button>
     </div>
+    <nav class="menu" id="site-menu" aria-label="Site">
+      <a href="#top">Home</a>
+      <a href="#brands">Portfolio</a>
+      <a href="#team">Team</a>
+      <a href="#faq">F.A.Q.</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <main>
@@ -94,7 +101,7 @@
     </section>
 
 
-    <section class="container section brands-section">
+    <section id="brands" class="container section brands-section">
       <h2 class="brands-title">Brands we work with</h2>
       <div class="brands-grid">
         <div class="brand-card">
@@ -134,7 +141,7 @@
       </div>
     </section>
 
-    <section class="container section team-section">
+    <section id="team" class="container section team-section">
       <h2>Meet the team</h2>
       <p class="section-lead">
         We’re a small, senior team focused on premium placement and real commercial outcomes for both brands and venues.
@@ -155,7 +162,7 @@
       </div>
     </section>
 
-    <section class="container section">
+    <section id="faq" class="container section">
       <h2>What we do</h2>
       <div class="grid3">
         <div class="card">
@@ -263,6 +270,26 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
+    const logoButton = document.querySelector(".logo-button");
+    const menu = document.getElementById("site-menu");
+
+    logoButton.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const isOpen = menu.classList.toggle("is-open");
+      logoButton.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    document.addEventListener("click", () => {
+      menu.classList.remove("is-open");
+      logoButton.setAttribute("aria-expanded", "false");
+    });
+
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("is-open");
+        logoButton.setAttribute("aria-expanded", "false");
+      });
+    });
   </script>
 </body>
 </html>
