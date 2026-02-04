@@ -70,11 +70,11 @@ a {
 }
 
 .logo {
-  height: 120px;
+  height: 72px;
   width: auto;
   display: block;
-  filter: drop-shadow(0 8px 20px rgba(124, 58, 237, 0.25));
-  transition: transform 0.3s ease;
+  filter: none;
+  transition: transform 0.2s ease;
 }
 
 .logo:hover {
@@ -545,7 +545,7 @@ a {
   }
 
   .logo {
-    height: 88px;
+    height: 56px;
   }
   
   .brands-section {
@@ -572,6 +572,6 @@ a {
 
 @media (min-width: 900px) {
   .logo {
-    height: 120px;
+    height: 72px;
   }
 }
