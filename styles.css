@@ -53,13 +53,14 @@ a {
   align-items: center;
   justify-content: center;
   padding: 40px 40px 24px;
-  background: linear-gradient(180deg, #f4f5f7 0%, #ffffff 60%);
+  background: transparent;
   border-bottom: none;
   position: sticky;
   top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  z-index: 200;
+  box-shadow: none;
   gap: 16px;
+  pointer-events: none;
 }
 
 .brand {
@@ -67,11 +68,15 @@ a {
   align-items: center;
   justify-content: center;
   gap: 12px;
+  height: auto;
+  overflow: visible;
+  pointer-events: auto;
 }
 
 .logo {
-  height: 220px;
-  width: auto;
+  width: 60vw;
+  max-width: 720px;
+  height: auto;
   display: block;
   filter: none;
   transition: transform 0.2s ease;
@@ -562,7 +567,8 @@ a {
   }
 
   .logo {
-    height: 140px;
+    width: 80vw;
+    max-width: 520px;
   }
   
   .brands-section {
@@ -589,6 +595,7 @@ a {
 
 @media (min-width: 900px) {
   .logo {
-    height: 220px;
+    width: 60vw;
+    max-width: 720px;
   }
 }
