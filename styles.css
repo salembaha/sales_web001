@@ -49,34 +49,36 @@ a {
 /* HEADER */
 .header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 28px 40px;
+  justify-content: center;
+  padding: 40px 40px 24px;
   background: var(--bg);
   border-bottom: none;
   position: sticky;
   top: 0;
   z-index: 100;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  gap: 16px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 12px;
 }
 
 .logo {
-  height: 56px;
+  height: 120px;
   width: auto;
   display: block;
-  filter: drop-shadow(0 4px 12px rgba(124, 58, 237, 0.2));
+  filter: drop-shadow(0 8px 20px rgba(124, 58, 237, 0.25));
   transition: transform 0.3s ease;
 }
 
 .logo:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .brand-mark {
@@ -480,7 +482,7 @@ a {
   }
 
   .logo {
-    height: 32px;
+    height: 88px;
   }
   
   .brands-section {
@@ -503,6 +505,6 @@ a {
 
 @media (min-width: 900px) {
   .logo {
-    height: 40px;
+    height: 120px;
   }
 }
