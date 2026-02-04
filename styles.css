@@ -45,6 +45,12 @@ a {
   gap: 12px;
 }
 
+.logo {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
 .brand-mark {
   width: 36px;
   height: 36px;
@@ -197,5 +203,12 @@ a {
   .hero-stats,
   .grid3 {
     grid-template-columns: 1fr;
+  }
+}
+
+/* RESPONSIVE */
+@media (min-width: 900px) {
+  .logo {
+    height: 32px;
   }
 }
