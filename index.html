@@ -267,6 +267,7 @@
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
     const logoButton = document.querySelector(".logo-button");
+    const logo = document.querySelector(".logo");
     const menu = document.getElementById("site-menu");
 
     logoButton.addEventListener("click", (event) => {
@@ -286,6 +287,29 @@
         logoButton.setAttribute("aria-expanded", "false");
       });
     });
+
+    const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+    const updateLogoOnScroll = () => {
+      const y = window.scrollY || 0;
+      const fade = clamp(1 - y / 420, 0.45, 1);
+      logo.style.opacity = String(fade);
+      if (y > 140) {
+        logo.classList.add("logo--glow");
+      } else {
+        logo.classList.remove("logo--glow");
+      }
+    };
+
+    let rafId = null;
+    window.addEventListener("scroll", () => {
+      if (rafId) return;
+      rafId = window.requestAnimationFrame(() => {
+        updateLogoOnScroll();
+        rafId = null;
+      });
+    }, { passive: true });
+
+    updateLogoOnScroll();
   </script>
 </body>
 </html>
