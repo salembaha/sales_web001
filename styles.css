@@ -95,8 +95,10 @@ a {
 
 .menu {
   position: absolute;
-  top: 100%;
-  margin-top: 8px;
+  top: calc(100% - 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0;
   display: none;
   flex-direction: column;
   gap: 6px;
