@@ -121,11 +121,11 @@
           <h3>Alma</h3>
           <p>Fresh, vibrant citrus-based beverages</p>
         </a>
-        <a href="https://talesfromghana.be/" target="_blank" rel="noreferrer" class="brand-card">
-          <div class="brand-image" style="background-image: url('logo1.png');">
+        <a href="https://bruutbier.nl/" target="_blank" rel="noreferrer" class="brand-card">
+          <div class="brand-image" style="background-image: url('Bruut-Bier-Logo-Transparent-Letter.svg');">
           </div>
-          <h3>Tale</h3>
-          <p>Stories and flavors from Ghana</p>
+          <h3>Bruut Bier</h3>
+          <p>Fresh, unfiltered Dutch craft beer</p>
         </a>
       </div>
     </section>
@@ -303,7 +303,7 @@
     const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
     const updateLogoOnScroll = () => {
       const y = window.scrollY || 0;
-      const fade = clamp(1 - y / 420, 0.45, 1);
+      const fade = clamp(1 - y / 420, 0, 1);
       logo.style.opacity = String(fade);
       if (y > 140) {
         logo.classList.add("logo--glow");
